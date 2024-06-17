@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body, html {
+    background-color: #191919;
+    color: #00ff00;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Impede a rolagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80vw; /* Usa 80% da largura da viewport */
+    max-width: 90vw; /* Limita a largura máxima a 90% da largura da viewport */
+    height: 80vh; /* Usa 80% da altura da viewport */
+    max-height: 90vh; /* Limita a altura máxima a 90% da altura da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Alinhamento central */
+    width: 100%;
+    height: 100%;
+}
+
+.header img {
+    max-width: 80%; /* Reduzido para caber melhor */
+    max-height: 50%; /* Reduzido para caber melhor */
+    object-fit: contain;
+}
+
+.header h1 {
+    margin: 0; /* Remove margem extra */
+    font-size: 4vw; /* Usa 4% da largura da viewport */
+    max-font-size: 24px; /* Limita o tamanho máximo da fonte a 24px */
+}
+
+/* Media queries para ajustes em telas menores */
+@media (max-width: 600px) {
+    .container {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .header h1 {
+        font-size: 6vw; /* Usa 6% da largura da viewport em telas menores */
+    }
+}
